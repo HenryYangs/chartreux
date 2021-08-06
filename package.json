@@ -1,0 +1,37 @@
+{
+  "name": "chartreux",
+  "version": "0.0.0",
+  "description": "Templates Set",
+  "main": "./bin/index.js",
+  "bin": {
+    "chartreux": "./bin/index.js"
+  },
+  "scripts": {
+    "build": "rollup --config rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HenryYangs/chartreux.git"
+  },
+  "keywords": [
+    "Templates"
+  ],
+  "author": "HenryYang <sephenry@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HenryYangs/chartreux/issues"
+  },
+  "homepage": "https://github.com/HenryYangs/chartreux#readme",
+  "devDependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^8.1.0",
+    "download": "^8.0.0",
+    "fs-extra": "^10.0.0",
+    "handlebars": "^4.7.7",
+    "inquirer": "^8.1.2",
+    "log-symbols": "^5.0.0",
+    "ora": "^5.4.1",
+    "update-notifier": "^5.1.0"
+  },
+  "dependencies": {}
+}

@@ -24,4 +24,13 @@ commander.command('set-mirror <template_mirror>')
             setMirror(mirror);
           });
 
+// download template
+const downloadTpl = require('../lib/download');
+
+commander.command('download-tpl')
+          .description('Download template from mirror')
+          .action(function() {
+            downloadTpl();
+          });
+
 commander.parse(process.argv);

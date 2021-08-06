@@ -33,4 +33,15 @@ commander.command('download-tpl')
             downloadTpl();
           });
 
+// init
+const init = require('../lib/init');
+
+commander.name('chartreux')
+          .usage('<commands> [options]')
+          .command('init <name>')
+          .description('Init a configuration template.')
+          .action(function(name) {
+            init(name);
+          });
+
 commander.parse(process.argv);

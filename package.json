@@ -29,7 +29,6 @@
     "fs-extra": "^10.0.0",
     "handlebars": "^4.7.7",
     "inquirer": "^8.1.2",
-    "log-symbols": "^5.0.0",
     "ora": "^5.4.1",
     "update-notifier": "^5.1.0"
   },

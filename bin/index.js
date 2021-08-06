@@ -15,4 +15,13 @@ commander.command('update')
             update();
           });
 
+// set mirror
+const setMirror = require('../lib/mirror');
+
+commander.command('set-mirror <template_mirror>')
+          .description('Set template mirror')
+          .action(function(mirror) {
+            setMirror(mirror);
+          });
+
 commander.parse(process.argv);

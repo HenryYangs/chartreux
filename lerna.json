@@ -1,6 +1,7 @@
 {
+  "useWorkspaces": true,
   "packages": [
-    "packages/*"
+    "packages/@chartreux/cli*"
   ],
   "version": "0.0.0"
 }

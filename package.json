@@ -8,11 +8,12 @@
     "validate-branch-name": "^1.0.6"
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "packages/@chartreux/*"
   ],
   "scripts": {
     "prepare": "husky install",
-    "pre-commit": "validate-branch-name && lint-staged",
+    "pre-commit": "validate-branch-name",
     "lint": "eslint . --ext .js --quiet"
   },
   "version": "0.0.0",

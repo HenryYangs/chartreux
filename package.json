@@ -2,6 +2,7 @@
   "private": true,
   "devDependencies": {
     "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.24.0",
     "husky": "^7.0.1",
     "lerna": "^3.22.1",
     "lint-staged": "^11.1.2",
@@ -13,7 +14,7 @@
   ],
   "scripts": {
     "prepare": "husky install",
-    "pre-commit": "validate-branch-name",
+    "pre-commit": "validate-branch-name && lint-staged",
     "lint": "eslint . --ext .js --quiet"
   },
   "version": "0.0.0",

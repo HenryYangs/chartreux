@@ -3,3 +3,6 @@ dist/
 node_modules
 .yalc
 todo.md
+package-lock.json
+.DS_Store
+.vscode

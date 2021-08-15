@@ -3,8 +3,9 @@ module.exports = {
   env: {
     node: true,
     es6: true,
+    jest: true,
   },
-  parseOptions: {
+  parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
   },
@@ -14,6 +15,8 @@ module.exports = {
     'import/order': ['warn', {
       alphabetize: { 'order': 'asc', 'caseInsensitive': true }
     }],
-    complexity: ['error', 10]
+    complexity: ['error', 10],
+    semi: ['error', 'always'],
+    quotes: ['error', 'single']
   }
 };

@@ -10,7 +10,7 @@
   "homepage": "https://github.com/HenryYangs/chartreux#readme",
   "license": "MIT",
   "bin": {
-    "chartreux": "bin/cli.js"
+    "chartreux": "bin/chartreux.js"
   },
   "directories": {
     "lib": "lib",
@@ -32,5 +32,6 @@
   },
   "bugs": {
     "url": "https://github.com/HenryYangs/chartreux/issues"
-  }
+  },
+  "devDependencies": {}
 }

@@ -1,5 +1,24 @@
 {
+  "name": "@chartreux/cli",
   "private": true,
+  "version": "0.0.0",
+  "description": "Command line interface for create different templates",
+  "keywords": [
+    "chartreux",
+    "cli"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "pre-commit": "validate-branch-name && lint-staged",
+    "lint": "eslint . --ext .js --quiet"
+  },
+  "license": "MIT",
+  "bin": {
+    "chartreux": "bin/chartreux.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.24.0",
@@ -9,23 +28,19 @@
     "lint-staged": "^11.1.2",
     "validate-branch-name": "^1.0.6"
   },
-  "workspaces": [
-    "packages/*",
-    "packages/@chartreux/*"
-  ],
-  "scripts": {
-    "prepare": "husky install",
-    "pre-commit": "validate-branch-name && lint-staged",
-    "lint": "eslint . --ext .js --quiet"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HenryYangs/chartreux.git"
   },
-  "version": "0.0.0",
-  "repository": "git@github.com:HenryYangs/chartreux.git",
+  "bugs": {
+    "url": "https://github.com/HenryYangs/chartreux/issues"
+  },
   "author": "HenryYang <sephenry@hotmail.com>",
   "validate-branch-name": {
     "pattern": "^(feature|bugfix)/.+$",
     "errorMsg": "Branch name is invalid"
   },
   "lint-staged": {
-    "packages/**/*.js": "npm run lint"
+    "*.js": "npm run lint"
   }
 }

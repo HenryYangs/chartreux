@@ -21,6 +21,13 @@ program
     require('../lib/config')(value, options);
   });
 
+program
+  .command('upgrade')
+  .description('upgrade chartreux')
+  .action(() => {
+    require('../lib/upgrade')();
+  });
+
 // output help information on unknown commands
 program.on('command:*', ([cmd]) => {
   program.outputHelp();

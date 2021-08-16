@@ -28,6 +28,13 @@ program
     require('../lib/upgrade')();
   });
 
+program
+  .command('fetch [tpl...]')
+  .description('fetch specific template from remote')
+  .action((tpl) => {
+    require('../lib/fetch')(tpl);
+  });
+
 // output help information on unknown commands
 program.on('command:*', ([cmd]) => {
   program.outputHelp();

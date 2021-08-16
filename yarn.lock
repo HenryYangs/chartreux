@@ -5035,7 +5035,7 @@ lerna@^3.22.1:
     import-local "^2.0.0"
     npmlog "^4.1.2"
 
-leven@^3.1.0:
+leven@3, leven@^3.1.0:
   version "3.1.0"
   resolved "https://registry.nlark.com/leven/download/leven-3.1.0.tgz?cache=0&sync_timestamp=1628598256034&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fleven%2Fdownload%2Fleven-3.1.0.tgz#77891de834064cccba82ae7842bb6b14a13ed7f2"
   integrity sha1-d4kd6DQGTMy6gq54QrtrFKE+1/I=

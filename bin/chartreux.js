@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
+const chalk = require('chalk');
 const program = require('commander');
+const leven = require('leven');
 const pkg = require('../package.json');
 
 program
@@ -19,4 +21,38 @@ program
     require('../lib/config')(value, options);
   });
 
-program.parse();
+// output help information on unknown commands
+program.on('command:*', ([cmd]) => {
+  program.outputHelp();
+  console.log('  ' + chalk.red(`Unknown command ${chalk.yellow(cmd)}.`));
+  console.log();
+  suggestCommands(cmd);
+  process.exitCode = 1;
+});
+
+// add some useful info on help
+program.on('--help', () => {
+  console.log();
+  console.log(`  Run ${chalk.cyan('chartreux <command> --help')} for detailed usage of given command.`);
+  console.log();
+});
+
+program.parse(process.argv);
+
+
+function suggestCommands (unknownCommand) {
+  const availableCommands = program.commands.map(cmd => cmd._name);
+
+  let suggestion;
+
+  availableCommands.forEach(cmd => {
+    const isBestMatch = leven(cmd, unknownCommand) < leven(suggestion || '', unknownCommand);
+    if (leven(cmd, unknownCommand) < 3 && isBestMatch) {
+      suggestion = cmd;
+    }
+  });
+
+  if (suggestion) {
+    console.log('  ' + chalk.red(`Did you mean ${chalk.yellow(suggestion)}?`));
+  }
+}

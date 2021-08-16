@@ -14,10 +14,15 @@ module.exports = {
   plugins: ['import'],
   rules: {
     'import/order': ['warn', {
-      alphabetize: { 'order': 'asc', 'caseInsensitive': true }
+      alphabetize: { 'order': 'asc', 'caseInsensitive': true },
     }],
     complexity: ['error', 10],
     semi: ['error', 'always'],
-    quotes: ['error', 'single']
-  }
+    quotes: [ 'error', 'single' ],
+    'comma-dangle': ['error', {
+      arrays: 'always-multiline',
+      objects: 'always-multiline',
+      functions: 'never',
+    }],
+  },
 };

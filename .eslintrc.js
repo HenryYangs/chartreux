@@ -9,6 +9,7 @@ module.exports = {
     ecmaVersion: 6,
     sourceType: 'module',
   },
+  parser: 'babel-eslint',
   extends: ['eslint:recommended'],
   plugins: ['import'],
   rules: {

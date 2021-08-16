@@ -1,0 +1,10 @@
+{
+  "eslint": {
+    "url": "44",
+    "default": "eslint"
+  },
+  "typescript": {
+    "url": "typescript",
+    "default": "typescript"
+  }
+}

@@ -4,7 +4,7 @@
     "default": "typescript"
   },
   "eslint": {
-    "url": "https://github.com/jprichardson/node-fs-extra/archive/e6a95058c930953113177c9518f57e83cace3e79.zip",
+    "url": "eslint",
     "default": "eslint"
   }
 }

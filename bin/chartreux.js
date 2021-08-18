@@ -35,6 +35,13 @@ program
     require('../lib/fetch')(tpl);
   });
 
+program
+  .command('install <tpl> [path]')
+  .description('install specific template')
+  .action((tpl, path) => {
+    require('../lib/install')(tpl, path);
+  });
+
 // output help information on unknown commands
 program.on('command:*', ([cmd]) => {
   program.outputHelp();
